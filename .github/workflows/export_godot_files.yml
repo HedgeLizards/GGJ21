@@ -4,6 +4,11 @@ on:
     branches:
       - master
       - main
+  pull-request:
+    branches:
+      - master
+      - main
+
 
 jobs:
   # job id, can be anything
