@@ -64,6 +64,13 @@ switch={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Rocks"
+2d_physics/layer_2="Miner"
+2d_physics/layer_3="Canary"
+2d_physics/layer_4="Water"
+
 [logging]
 
 file_logging/enable_file_logging.pc=false
