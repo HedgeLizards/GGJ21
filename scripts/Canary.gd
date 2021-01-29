@@ -1,31 +1,41 @@
 extends KinematicBody2D
 
 export var GRAVITY = 300
-export var speed = 200
-export var flap_speed = 350
+export var fly_speed = 300
+export var walk_speed = 100
+export var flap_speed = 250
+export var max_fall_speed = 200
 var active = false
-var vspeed = 0
+var vel = Vector2()
 var is_player = true
+var dir = 1
 
 func _physics_process(delta):
-	var hspeed = 0
 	
-	if Input.is_action_pressed('left') and active:
-		hspeed -= speed
-	if Input.is_action_pressed('right')and active:
-		hspeed += speed
+	var control = int(Input.is_action_pressed('right')) - int(Input.is_action_pressed('left'))
+	if control != 0 and active:
+		dir = control
+	if is_on_floor():
+		if active:
+			vel.x = control * walk_speed
+		else:
+			vel.x = 0
+	else:
+		vel.x = dir * fly_speed
+	
+	
 	
 	if Input.is_action_just_pressed('up') and active:
-		vspeed = -flap_speed
+		vel.y = -flap_speed
 	
-	move_and_slide(Vector2(hspeed, vspeed), Vector2.UP)
+	move_and_slide(vel, Vector2.UP)
 	
 	if is_on_floor() || is_on_ceiling():
-		vspeed = 5
+		vel.y = 5
 	
-	vspeed += GRAVITY * delta
+	vel.y = min(vel.y + GRAVITY * delta, max_fall_speed)
 	
 	if is_on_floor():
 		$Label.text = 'IDLE'
 	else:
-		$Label.text = 'FLAP' if vspeed < 0 else 'FALL'
+		$Label.text = 'FLAP' if vel.y < 0 else 'FALL'
