@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
-export var GRAVITY = 9.81 * 10
+export var GRAVITY = 9.81 * 20
 export var speed = 100
 export var jump_speed = 200
 export var jump_in_air = false
 var vel = Vector2()
 var active = false
+var is_player = true
 
 # adapted from 3d thing
 

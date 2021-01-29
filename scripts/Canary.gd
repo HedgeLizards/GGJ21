@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var active = false
 var vspeed = 0
+var is_player = true
 
 func _physics_process(delta):
 	var hspeed = 0

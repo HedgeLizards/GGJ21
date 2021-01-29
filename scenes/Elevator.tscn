@@ -4,10 +4,9 @@
 [ext_resource path="res://scenes/Platform.tscn" type="PackedScene" id=2]
 
 [node name="Elevator" type="Node2D"]
-position = Vector2( 851.543, 419.484 )
 script = ExtResource( 1 )
 
-[node name="Floor" type="StaticBody2D" parent="." instance=ExtResource( 2 )]
+[node name="Floor" parent="." instance=ExtResource( 2 )]
 scale = Vector2( 5, 0.2 )
 
 [node name="Top" type="Node2D" parent="."]
