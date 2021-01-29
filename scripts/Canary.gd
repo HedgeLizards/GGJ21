@@ -17,7 +17,7 @@ func _physics_process(delta):
 	move_and_slide(Vector2(hspeed, vspeed), Vector2.UP)
 	
 	if is_on_floor() || is_on_ceiling():
-		vspeed = 0
+		vspeed = 5
 	
 	vspeed += 300 * delta
 	
