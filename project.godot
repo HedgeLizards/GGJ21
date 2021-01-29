@@ -66,4 +66,5 @@ file_logging/enable_file_logging.pc=false
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=1
+quality/2d/use_pixel_snap=true
 vram_compression/import_etc2=false
