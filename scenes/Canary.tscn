@@ -25,7 +25,6 @@ smoothing_enabled = true
 [node name="Light2D" type="Light2D" parent="."]
 z_index = 1
 texture = ExtResource( 3 )
-mode = 3
 range_z_min = 1
 range_z_max = 1
 shadow_enabled = true
