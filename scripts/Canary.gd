@@ -1,16 +1,17 @@
 extends KinematicBody2D
 
+var active = false
 var vspeed = 0
 
 func _physics_process(delta):
 	var hspeed = 0
 	
-	if Input.is_action_pressed('left'):
+	if Input.is_action_pressed('left') and active:
 		hspeed -= 200
-	if Input.is_action_pressed('right'):
+	if Input.is_action_pressed('right')and active:
 		hspeed += 200
 	
-	if Input.is_action_just_pressed('up'):
+	if Input.is_action_just_pressed('up') and active:
 		vspeed = -350
 	
 	move_and_slide(Vector2(hspeed, vspeed), Vector2.UP)
