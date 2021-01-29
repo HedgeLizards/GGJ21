@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Environment.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Miner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Canary.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/World.gd" type="Script" id=4]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Environment" parent="." instance=ExtResource( 1 )]
+
+[node name="Miner" parent="." instance=ExtResource( 2 )]
+position = Vector2( 233, 94 )
+
+[node name="Camera" type="Camera2D" parent="Miner"]
+
+[node name="Canary" parent="." instance=ExtResource( 3 )]
+position = Vector2( 449.038, 265.723 )
