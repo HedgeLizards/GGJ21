@@ -9,3 +9,6 @@
 
 [node name="Miner" parent="." instance=ExtResource( 2 )]
 position = Vector2( 233, 94 )
+
+[node name="Camera2D" type="Camera2D" parent="Miner"]
+current = true
