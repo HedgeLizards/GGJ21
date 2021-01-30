@@ -41,3 +41,4 @@ frame = 1
 position = Vector2( 85, -30 )
 
 [node name="Lantern" parent="Hand" instance=ExtResource( 1 )]
+range_height = 200.0
