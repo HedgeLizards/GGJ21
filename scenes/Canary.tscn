@@ -15,7 +15,7 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 12.0
 } ]
 
 [node name="Canary" type="KinematicBody2D"]

@@ -17,8 +17,9 @@ func _physics_process(delta):
 		dir = control
 		$Sprite.flip_h = (dir < 0)
 	if is_on_floor():
-		if active:
-			vel.x = control * walk_speed
+		if active and control != 0:
+			vel.y = -100
+			vel.x = control * fly_speed
 		else:
 			vel.x = 0
 	else:
