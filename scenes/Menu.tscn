@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/icon.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/logo.png" type="Texture" id=3]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -89.0
+margin_top = 25.0
+margin_right = -25.0
+margin_bottom = 89.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 64, 0 )
+mouse_default_cursor_shape = 2
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.25
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_scale = Vector2( 10, 1 )
+rect_pivot_offset = Vector2( 32, 32 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.55
+margin_left = -32.0
+margin_top = -96.0
+margin_right = 32.0
+margin_bottom = -32.0
+rect_scale = Vector2( 5, 1 )
+rect_pivot_offset = Vector2( 32, 32 )
+mouse_default_cursor_shape = 2
+action_mode = 0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.55
+margin_left = -32.0
+margin_top = 32.0
+margin_right = 32.0
+margin_bottom = 96.0
+rect_scale = Vector2( 5, 1 )
+rect_pivot_offset = Vector2( 32, 32 )
+mouse_default_cursor_shape = 2
+action_mode = 0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = -281.0
+margin_right = 281.0
+margin_bottom = -25.0
+rect_pivot_offset = Vector2( 0, 256 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="Audio" to="." method="_on_Audio_mouse_entered"]
+[connection signal="mouse_exited" from="Audio" to="." method="_on_Audio_mouse_exited"]
+[connection signal="toggled" from="Audio" to="." method="_on_Audio_toggled"]
+[connection signal="mouse_entered" from="Start" to="." method="_on_Start_mouse_entered"]
+[connection signal="mouse_exited" from="Start" to="." method="_on_Start_mouse_exited"]
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="mouse_entered" from="Exit" to="." method="_on_Exit_mouse_entered"]
+[connection signal="mouse_exited" from="Exit" to="." method="_on_Exit_mouse_exited"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
