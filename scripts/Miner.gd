@@ -13,6 +13,8 @@ var is_player = true
 func _physics_process(delta):
 	if active:
 		var input_movement = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
+		if (input_movement < 0): $Sprite.flip_h = true
+		if (input_movement > 0): $Sprite.flip_h = false
 		vel.x = input_movement*speed
 	else:
 		vel.x = 0

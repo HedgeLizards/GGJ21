@@ -1,7 +1,7 @@
 extends Node2D
 
 
-export var height = 256
+export var height = 1024
 export var at_top = true
 export var speed = 100
 

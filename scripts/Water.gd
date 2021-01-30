@@ -1,8 +1,8 @@
 tool
 extends StaticBody2D
 
-export(Vector2) var size = Vector2(40, 120) setget set_size
-export(Color) var color = Color.blue setget set_color
+export(Vector2) var size = Vector2(96, 512) setget set_size
+export(Color, RGB) var color = Color(0, 0, 1) setget set_color
 
 func set_size(value):
 	size = value
@@ -22,7 +22,7 @@ func set_color(value):
 	color = value
 	
 	$ColorRect.material = $ColorRect.material.duplicate()
-	$ColorRect.material.set_shader_param('color', color)
+	$ColorRect.material.set_shader_param('color', Color(color.r, color.g, color.b, 0.9))
 	
 	$Particles2D.process_material = $Particles2D.process_material.duplicate(true)
 	$Particles2D.process_material.color_ramp.gradient.colors = [color, Color(color.r, color.g, color.b, 0.0)]
