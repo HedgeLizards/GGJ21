@@ -24,6 +24,16 @@ func _ready():
 
 func _process(delta):
 	t += delta
+	if alight != ON:
+		return
+	for body in $Area.get_overlapping_bodies():
+		if body.get("flowing"):
+			energy -= delta / 0.5
+			return
+	if energy <= 0.05:
+		alight = OFF
+		lightup()
+	texture_scale = energy / avg_energy
 	position.x = sin(t * (2*PI) / swing_time) * swing 
 	position.y = -sin((t*2) * (2*PI) / swing_time) * swing 
 	energy += delta * ((1-avg_attraction) * rand_range(-d_energy, d_energy) + avg_attraction * (avg_energy - energy))
