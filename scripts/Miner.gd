@@ -12,8 +12,12 @@ func _physics_process(delta):
 	if active:
 		var input_movement = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 		
-		if input_movement < 0: $Sprite.flip_h = true
-		if input_movement > 0: $Sprite.flip_h = false
+		if input_movement < 0:
+			$Sprite.flip_h = true
+			$Hand.position.x = -abs($Hand.position.x)
+		if input_movement > 0:
+			$Sprite.flip_h = false
+			$Hand.position.x = abs($Hand.position.x)
 		
 		if input_movement != 0 && is_on_floor():
 			$Sprite.playing = true
