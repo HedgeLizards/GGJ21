@@ -12,12 +12,14 @@ func _physics_process(delta):
 	if active:
 		var input_movement = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 		
-		if input_movement < 0:
+		if input_movement < 0 && !$Sprite.flip_h:
 			$Sprite.flip_h = true
-			$Hand.position.x = -abs($Hand.position.x)
-		if input_movement > 0:
+			$Tween.interpolate_property($Hand, 'position:x', null, -$Hand.position.x, 0.2, Tween.TRANS_SINE, Tween.EASE_OUT)
+			$Tween.start()
+		if input_movement > 0 && $Sprite.flip_h:
 			$Sprite.flip_h = false
-			$Hand.position.x = abs($Hand.position.x)
+			$Tween.interpolate_property($Hand, 'position:x', null, -$Hand.position.x, 0.2, Tween.TRANS_SINE, Tween.EASE_OUT)
+			$Tween.start()
 		
 		if input_movement != 0 && is_on_floor():
 			$Sprite.playing = true
