@@ -12,9 +12,6 @@ extents = Vector2( 50, 100 )
 [node name="Miner" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
-GRAVITY = 700.0
-speed = 300
-jump_speed = 450
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 12 )

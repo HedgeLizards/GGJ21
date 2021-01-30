@@ -30,7 +30,7 @@ func _physics_process(delta):
 	
 	move_and_slide(vel, Vector2.UP)
 	
-	if is_on_floor() || is_on_ceiling():
+	if is_on_ceiling():
 		vel.y = 5
 	
 	vel.y = min(vel.y + GRAVITY * delta, max_fall_speed)
