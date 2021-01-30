@@ -19,8 +19,8 @@ extents = Vector2( 50, 100 )
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "default",
-"speed": 12.0
+"name": "walk",
+"speed": 6.0
 } ]
 
 [node name="Miner" type="KinematicBody2D"]
@@ -28,13 +28,14 @@ collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 12 )
+position = Vector2( 0, 28 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 2 )
-animation = "New Anim"
+animation = "walk"
+frame = 4
 playing = true
 
 [node name="Hand" type="Node2D" parent="."]
