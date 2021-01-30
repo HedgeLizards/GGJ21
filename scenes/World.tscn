@@ -35,7 +35,6 @@ script = ExtResource( 7 )
 [node name="Tween" type="Tween" parent="Miner/Camera"]
 
 [node name="Canary" parent="." instance=ExtResource( 3 )]
-visible = false
 position = Vector2( 1193, 1126 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
