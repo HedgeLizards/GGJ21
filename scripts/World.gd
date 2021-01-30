@@ -22,11 +22,13 @@ func activate_player():
 		$Miner.active = false
 		$Canary/Camera.current = true
 		$Miner/Camera.current = false
+		$Canary/Light.visible = true
 	else:
 		$Canary.active = false
 		$Miner.active = true
 		$Canary/Camera.current = false
 		$Miner/Camera.current = true
+		$Canary/Light.visible = false
 
 
 func _input(event):
