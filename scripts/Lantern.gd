@@ -3,6 +3,8 @@ extends Light2D
 
 export var swing = 6
 export var swing_time = 3
+export var rotation_factor = 0.05
+export var rotation_time = 3
 
 export var d_energy = 0.6
 export var avg_energy = 1.0
@@ -19,3 +21,4 @@ func _process(delta):
 	position.y = -sin((t*2) * (2*PI) / swing_time) * swing 
 	energy += delta * ((1-avg_attraction) * rand_range(-d_energy, d_energy) + avg_attraction * (avg_energy - energy))
 	energy = clamp(energy, min_energy, max_energy)
+	rotation = sin(1+(t*2) * (2*PI) / swing_time) * rotation_factor
