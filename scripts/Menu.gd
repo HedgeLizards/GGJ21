@@ -1,7 +1,16 @@
 extends Control
 
+func _ready():
+	var factor = OS.get_screen_dpi() / 72.0
+	
+	for child in get_children():
+		child.rect_scale *= factor
+
+	$Logo.rect_position += Vector2(25, -25) * factor
+	$Audio.rect_position += Vector2(-25, -25) * factor
+
 func _on_Audio_mouse_entered():
-	$Audio.modulate = Color(1.5, 1.5, 1.5)
+	$Audio.modulate = Color(1.2, 1.2, 1.2)
 
 func _on_Audio_mouse_exited():
 	$Audio.modulate = Color(1, 1, 1)
@@ -9,20 +18,20 @@ func _on_Audio_mouse_exited():
 func _on_Audio_toggled(button_pressed):
 	AudioServer.set_bus_mute(0, button_pressed)
 
-func _on_Start_mouse_entered():
-	$Start.modulate = Color(1.5, 1.5, 1.5)
+func _on_Play_mouse_entered():
+	$VBoxContainer/Play.modulate = Color(1.2, 1.2, 1.2)
 
-func _on_Start_mouse_exited():
-	$Start.modulate = Color(1, 1, 1)
+func _on_Play_mouse_exited():
+	$VBoxContainer/Play.modulate = Color(1, 1, 1)
 
-func _on_Start_pressed():
+func _on_Play_pressed():
 	get_tree().change_scene_to(preload('res://scenes/World.tscn'))
 
 func _on_Exit_mouse_entered():
-	$Exit.modulate = Color(1.5, 1.5, 1.5)
+	$VBoxContainer/Exit.modulate = Color(1.2, 1.2, 1.2)
 
 func _on_Exit_mouse_exited():
-	$Exit.modulate = Color(1, 1, 1)
+	$VBoxContainer/Exit.modulate = Color(1, 1, 1)
 
 func _on_Exit_pressed():
 	get_tree().quit()
