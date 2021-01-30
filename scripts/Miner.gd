@@ -5,7 +5,7 @@ export var speed = 100
 export var jump_speed = 200
 export var jump_in_air = false
 var vel = Vector2()
-var active = false
+var active = true
 var is_player = true
 
 # adapted from 3d thing

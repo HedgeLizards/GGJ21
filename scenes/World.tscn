@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/Environment.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Miner.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scripts/World.gd" type="Script" id=4]
 [ext_resource path="res://scripts/Darkness.gd" type="Script" id=5]
 [ext_resource path="res://assets/background.png" type="Texture" id=6]
+[ext_resource path="res://scripts/camera.gd" type="Script" id=7]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 4 )
@@ -29,6 +30,10 @@ __meta__ = {
 position = Vector2( 233, 94 )
 
 [node name="Camera" type="Camera2D" parent="Miner"]
+current = true
+script = ExtResource( 7 )
+
+[node name="Tween" type="Tween" parent="Miner/Camera"]
 
 [node name="Canary" parent="." instance=ExtResource( 3 )]
 position = Vector2( 449.038, 265.723 )
@@ -41,3 +46,4 @@ script = ExtResource( 5 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( 233, 94 )
 color = Color( 0, 0, 0, 1 )
+[connection signal="tween_step" from="Miner/Camera/Tween" to="Miner/Camera" method="_on_Tween_tween_step"]
