@@ -24,6 +24,8 @@ func _physics_process(delta):
 	else:
 		vel.x = dir * fly_speed
 	
+	$Sprite.playing = vel.x != 0
+	
 	
 	
 	if Input.is_action_just_pressed('up') and active:

@@ -50,4 +50,3 @@ __meta__ = {
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
 animation = "New Anim"
-playing = true
