@@ -16,5 +16,5 @@ tile_data = PoolIntArray( 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 2621
 [node name="Platform" parent="." instance=ExtResource( 2 )]
 
 [node name="Water" parent="." instance=ExtResource( 3 )]
-position = Vector2( 400, 300 )
-size = Vector2( 34, 116 )
+position = Vector2( 405, 216 )
+size = Vector2( 30, 200 )
