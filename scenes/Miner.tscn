@@ -26,8 +26,9 @@ position = Vector2( 30, -15 )
 
 [node name="Lantern" type="Light2D" parent="Hand"]
 texture = ExtResource( 3 )
-color = Color( 1, 0.905882, 0.741176, 1 )
+color = Color( 1, 0.776471, 0.423529, 1 )
 range_height = 100.0
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 1 )
+shadow_filter_smooth = 1.0
 script = ExtResource( 5 )
