@@ -15,6 +15,7 @@ func _physics_process(delta):
 	var control = int(Input.is_action_pressed('right')) - int(Input.is_action_pressed('left'))
 	if control != 0 and active:
 		dir = control
+		$Sprite.flip_h = (dir < 0)
 	if is_on_floor():
 		if active:
 			vel.x = control * walk_speed

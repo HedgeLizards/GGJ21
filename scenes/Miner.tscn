@@ -35,7 +35,7 @@ shape = SubResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 2 )
 animation = "walk"
-frame = 1
+frame = 7
 playing = true
 
 [node name="Hand" type="Node2D" parent="."]
