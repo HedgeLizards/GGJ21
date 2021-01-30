@@ -1,5 +1,6 @@
 extends Camera2D
 
+var light
 var origin
 var animation
 
@@ -14,3 +15,5 @@ func move_to(node):
 
 func _on_Tween_tween_step(object, key, elapsed, value):
 	offset = animation * (origin - global_position)
+	
+	light.texture_scale = (1 - animation if get_parent().name == 'Canary' else animation) * 2

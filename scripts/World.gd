@@ -12,18 +12,17 @@ func _ready():
 	var factor = 72.0 / OS.get_screen_dpi()
 	
 	$Miner/Camera.zoom = Vector2(factor, factor)
+	$Miner/Camera.light = $Canary/Light
 
 func activate_player():
 	if is_canary:
 		$Canary.active = true
 		$Miner.active = false
 		$Miner/Camera.move_to($Canary)
-		$Canary/Light.enabled = true
 	else:
 		$Canary.active = false
 		$Miner.active = true
 		$Canary/Camera.move_to($Miner)
-		$Canary/Light.enabled = false
 
 
 func _input(event):
