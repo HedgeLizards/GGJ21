@@ -39,7 +39,7 @@ frame = 4
 playing = true
 
 [node name="Hand" type="Node2D" parent="."]
-position = Vector2( 30, -15 )
+position = Vector2( 85, -30 )
 
 [node name="Lantern" type="Light2D" parent="Hand"]
 texture = ExtResource( 3 )
