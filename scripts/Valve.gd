@@ -1,15 +1,15 @@
 extends Area2D
 
-export(NodePath) var water
+export(Array, NodePath) var waters
 
-onready var collision_shape_2d = get_node('%s/CollisionShape2D' % water)
-onready var color_rect = get_node('%s/ColorRect' % water)
-onready var narrowness = color_rect.material.get_shader_param('narrowness')
-onready var particles_2d = get_node('%s/Particles2D' % water)
-
+var water_nodes = []
 var activator = null
-var open = true
+var turned = false
 var animation = 0
+
+func _ready():
+	for water in waters:
+		water_nodes.push_back(get_node(water))
 
 func _on_Valve_body_entered(body):
 	activator = body
@@ -19,20 +19,22 @@ func _on_Valve_body_exited(body):
 
 func _unhandled_input(event):
 	if activator && activator.active && event.is_action_pressed('interact'):
-		collision_shape_2d.disabled = open
+		for water_node in water_nodes:
+			water_node.get_node('CollisionShape2D').disabled = water_node.flowing
+			water_node.flowing = !water_node.flowing
+			water_node.get_node('Particles2D').emitting = water_node.flowing
+			
+		turned = !turned
 		
-		open = !open
-		
-		particles_2d.emitting = open
-		
-		if open:
-			$Tween.interpolate_property(self, 'animation', null, 0, animation * 2, Tween.EASE_IN_OUT, Tween.TRANS_SINE)
+		if turned:
+			$Tween.interpolate_property(self, 'animation', null, 1, (1 - animation) * 2, Tween.TRANS_LINEAR, 0)
 		else:
-			$Tween.interpolate_property(self, 'animation', null, 1, (1 - animation) * 2, Tween.EASE_IN_OUT, Tween.TRANS_SINE)
+			$Tween.interpolate_property(self, 'animation', null, 0, animation * 2, Tween.TRANS_LINEAR, 0)
 		
 		$Tween.start()
 
 func _on_Tween_tween_step(object, key, elapsed, value):
-	rotation_degrees = animation * 270
+	for water_node in water_nodes:
+		water_node.scale.x = animation if water_node.flowing == turned else 1 - animation
 	
-	color_rect.material.set_shader_param('narrowness', narrowness + (0.5 - narrowness) * animation)
+	rotation_degrees = animation * 270

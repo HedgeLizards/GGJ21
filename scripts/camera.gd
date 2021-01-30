@@ -9,7 +9,7 @@ func move_to(node):
 	get_parent().remove_child(self)
 	node.add_child(self)
 	
-	$Tween.interpolate_property(self, 'animation', 1, 0, 1, Tween.EASE_IN_OUT, Tween.TRANS_SINE)
+	$Tween.interpolate_property(self, 'animation', 1, 0, 1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$Tween.start()
 
 func _on_Tween_tween_step(object, key, elapsed, value):

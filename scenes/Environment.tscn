@@ -33,11 +33,15 @@ position = Vector2( 1344, 1088 )
 position = Vector2( 256, 1120 )
 
 [node name="Water1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 528, 384 )
+position = Vector2( 448, 384 )
+flowing = false
+
+[node name="Water2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 576, 384 )
 
 [node name="Valve1" parent="." instance=ExtResource( 6 )]
 position = Vector2( 256, 768 )
-water = NodePath("../Water1")
+waters = [ NodePath("../Water1"), NodePath("../Water2") ]
 
 [node name="MoveInstructions" type="Label" parent="."]
 margin_left = 127.0
