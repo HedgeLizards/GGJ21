@@ -35,11 +35,11 @@ shape = SubResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 2 )
 animation = "walk"
-frame = 1
 
 [node name="Hand" type="Node2D" parent="."]
 position = Vector2( 85, -30 )
 
 [node name="Lantern" parent="Hand" instance=ExtResource( 1 )]
+range_height = 200.0
 
 [node name="Tween" type="Tween" parent="."]

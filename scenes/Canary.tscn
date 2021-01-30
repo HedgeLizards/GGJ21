@@ -14,7 +14,7 @@ extents = Vector2( 20, 10.8339 )
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "default",
+"name": "fly",
 "speed": 12.0
 } ]
 
@@ -36,17 +36,7 @@ energy = 0.7
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 1 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = -50.0
-margin_top = -46.0
-margin_right = 50.0
-margin_bottom = -32.0
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
-animation = "New Anim"
+animation = "fly"

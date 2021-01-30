@@ -39,7 +39,3 @@ func _physics_process(delta):
 	
 	vel.y = min(vel.y + GRAVITY * delta, max_fall_speed)
 	
-	if is_on_floor():
-		$Label.text = 'IDLE'
-	else:
-		$Label.text = 'FLAP' if vel.y < 0 else 'FALL'

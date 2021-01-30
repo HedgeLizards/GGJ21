@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Lantern.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/background.png" type="Texture" id=2]
+[ext_resource path="res://assets/lantern.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1024.0
+margin_top = -1024.0
+margin_right = 1024.0
+margin_bottom = 1024.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0, 0, 0, 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 540.337, 288.036 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Lantern" parent="Node2D" instance=ExtResource( 1 )]
+swing = 1
+
+[node name="Sprite" type="Sprite" parent="Node2D/Lantern"]
+texture = ExtResource( 3 )
