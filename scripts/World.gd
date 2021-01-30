@@ -9,6 +9,11 @@ export var is_canary = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var factor = 72.0 / OS.get_screen_dpi()
+	
+	$Miner/Camera.zoom = Vector2(factor, factor)
+	$Canary/Camera.zoom = Vector2(factor, factor)
+	
 	self.activate_player()
 
 func activate_player():
