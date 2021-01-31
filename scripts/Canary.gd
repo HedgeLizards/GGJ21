@@ -12,6 +12,7 @@ var dir = 1
 
 func _ready():
 	$Light.texture_scale = 0
+	$Sprite.playing = true
 
 func _physics_process(delta):
 	
@@ -28,7 +29,10 @@ func _physics_process(delta):
 	else:
 		vel.x = dir * fly_speed
 	
-	$Sprite.playing = vel.x != 0
+	if vel.x == 0:
+		$Sprite.animation = "idle"
+	else:
+		$Sprite.animation = "fly"
 	
 	
 	

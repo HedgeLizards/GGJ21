@@ -1,7 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/Lantern.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Miner.gd" type="Script" id=2]
+[ext_resource path="res://scripts/MinerSounds.gd" type="Script" id=3]
+[ext_resource path="res://assets/sounds/STEP_3.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/sounds/STEP_2.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/miner/miner_walk_0.png" type="Texture" id=6]
 [ext_resource path="res://assets/miner/miner_walk_6.png" type="Texture" id=7]
 [ext_resource path="res://assets/miner/miner_walk_5.png" type="Texture" id=8]
@@ -10,16 +13,28 @@
 [ext_resource path="res://assets/miner/miner_walk_2.png" type="Texture" id=11]
 [ext_resource path="res://assets/miner/miner_walk_1.png" type="Texture" id=12]
 [ext_resource path="res://assets/miner/miner_walk_7.png" type="Texture" id=13]
+[ext_resource path="res://assets/sounds/STEP_1.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/STEP_4.wav" type="AudioStream" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 100 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [node name="Miner" type="KinematicBody2D"]
@@ -34,7 +49,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 2 )
-animation = "walk"
+animation = "jump"
 
 [node name="Hand" type="Node2D" parent="."]
 position = Vector2( 85, -30 )
@@ -43,3 +58,8 @@ position = Vector2( 85, -30 )
 range_height = 200.0
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="MinerSounds" type="AudioStreamPlayer2D" parent="."]
+volume_db = -20.371
+script = ExtResource( 3 )
+sounds = [ ExtResource( 14 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 15 ) ]

@@ -5,6 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 export var is_canary = false
+var can_switch = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -29,8 +30,14 @@ func activate_player():
 
 
 func _input(event):
-	if Input.is_action_just_pressed("switch"):
+	if Input.is_action_just_pressed("switch") and can_switch:
 		self.is_canary = not is_canary
 		self.activate_player()
 
+
+
+
+func _on_CanaryDetection_body_entered(body):
+	if body.get("is_miner"):
+		can_switch = true
 
