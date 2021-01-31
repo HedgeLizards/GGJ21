@@ -8,6 +8,8 @@ func _ready():
 
 	$Logo.rect_position += Vector2(25, -25) * factor
 	$Audio.rect_position += Vector2(-25, -25) * factor
+	
+	$Audio.pressed = AudioServer.is_bus_mute(0)
 
 func _on_Audio_mouse_entered():
 	$Audio.modulate = Color(1.2, 1.2, 1.2)

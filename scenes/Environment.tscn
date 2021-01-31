@@ -1,20 +1,21 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://assets/tilesets/placeholder_tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/tiles/placeholder_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Ending.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Elevator.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Lever.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Water.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Valve.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/MOVE.png" type="Texture" id=7]
-[ext_resource path="res://assets/SWITCH.png" type="Texture" id=8]
-[ext_resource path="res://assets/INTERACT.png" type="Texture" id=9]
+[ext_resource path="res://assets/instructions/MOVE.png" type="Texture" id=7]
+[ext_resource path="res://assets/instructions/SWITCH.png" type="Texture" id=8]
+[ext_resource path="res://assets/instructions/INTERACT.png" type="Texture" id=9]
 [ext_resource path="res://scenes/WallLantern.tscn" type="PackedScene" id=10]
 
 [node name="Environment" type="Node2D"]
 
 [node name="Tiles" type="TileMap" parent="."]
 scale = Vector2( 3, 3 )
+z_index = 1
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -174,10 +175,10 @@ scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 9 )
 
 [node name="WallLantern1" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1536, -1152 )
+position = Vector2( 1536, -1344 )
 
 [node name="WallLantern2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1536, -3840 )
+position = Vector2( 1728, -4032 )
 [connection signal="on_pulled" from="Lever1" to="Elevator1" method="toggle"]
 [connection signal="on_pulled" from="Lever2" to="Elevator2" method="toggle"]
 [connection signal="on_pulled" from="Lever3" to="Elevator3" method="toggle"]

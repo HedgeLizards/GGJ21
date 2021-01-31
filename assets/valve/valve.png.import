@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MOVE.png-dddda88ae953c3919dc49af783d04d2e.stex"
+path="res://.import/valve.png-d4055eb0ce19a57d5f86197200b3151f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MOVE.png"
-dest_files=[ "res://.import/MOVE.png-dddda88ae953c3919dc49af783d04d2e.stex" ]
+source_file="res://assets/valve/valve.png"
+dest_files=[ "res://.import/valve.png-d4055eb0ce19a57d5f86197200b3151f.stex" ]
 
 [params]
 

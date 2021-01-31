@@ -18,7 +18,7 @@
 [ext_resource path="res://assets/miner/miner_idle_1.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 50, 120 )
+extents = Vector2( 102, 120 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {

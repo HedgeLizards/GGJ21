@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SWITCH.png-ff9d0b0adf145c8c5bff007fab08ca36.stex"
+path="res://.import/SWITCH.png-0b94f31ed33956d600cd7e6cc16313cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SWITCH.png"
-dest_files=[ "res://.import/SWITCH.png-ff9d0b0adf145c8c5bff007fab08ca36.stex" ]
+source_file="res://assets/instructions/SWITCH.png"
+dest_files=[ "res://.import/SWITCH.png-0b94f31ed33956d600cd7e6cc16313cf.stex" ]
 
 [params]
 

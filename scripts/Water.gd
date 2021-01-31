@@ -3,7 +3,7 @@ extends StaticBody2D
 
 export(bool) var flowing = true
 export(Vector2) var size = Vector2(96, 384) setget set_size
-export(Color, RGB) var color = Color(0, 0.25, 0.5) setget set_color
+export(Color, RGB) var color = Color(0, 0.3, 0.4) setget set_color
 
 func _ready():
 	if !Engine.is_editor_hint() && !flowing:

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gear.png-b5ad7c9cdc7d776a49d68542142400cc.stex"
+path="res://.import/elevator.png-acbb9d6b280a7beb809eaa023b52f90b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/valve/gear.png"
-dest_files=[ "res://.import/gear.png-b5ad7c9cdc7d776a49d68542142400cc.stex" ]
+source_file="res://assets/elevator.png"
+dest_files=[ "res://.import/elevator.png-acbb9d6b280a7beb809eaa023b52f90b.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lift_platform.png-ff9b550a47ba8897efbdf6d0996cf770.stex"
+path="res://.import/INTERACT.png-b588ed241cf79fd2cf4180c9022e54e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Lift_platform.png"
-dest_files=[ "res://.import/Lift_platform.png-ff9b550a47ba8897efbdf6d0996cf770.stex" ]
+source_file="res://assets/instructions/INTERACT.png"
+dest_files=[ "res://.import/INTERACT.png-b588ed241cf79fd2cf4180c9022e54e2.stex" ]
 
 [params]
 
