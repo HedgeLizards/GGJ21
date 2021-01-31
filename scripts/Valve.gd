@@ -26,6 +26,8 @@ func _unhandled_input(event):
 			
 		turned = !turned
 		
+		$Tween.remove_all()
+		
 		if turned:
 			$Tween.interpolate_property(self, 'animation', null, 1, (1 - animation) * 2, Tween.TRANS_LINEAR, 0)
 		else:
