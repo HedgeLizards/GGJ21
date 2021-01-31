@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/valve.png-d4055eb0ce19a57d5f86197200b3151f.stex"
+path="res://.import/gear.png-b5ad7c9cdc7d776a49d68542142400cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/valve/valve.png"
-dest_files=[ "res://.import/valve.png-d4055eb0ce19a57d5f86197200b3151f.stex" ]
+source_file="res://assets/valve/gear.png"
+dest_files=[ "res://.import/gear.png-b5ad7c9cdc7d776a49d68542142400cc.stex" ]
 
 [params]
 

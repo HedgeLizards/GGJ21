@@ -51,7 +51,6 @@ position = Vector2( 1296, -7872 )
 
 [node name="Water10" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2544, -7488 )
-flowing = false
 
 [node name="Valve1" parent="." instance=ExtResource( 6 )]
 position = Vector2( 384, -384 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Elevator.gd" type="Script" id=1]
-[ext_resource path="res://assets/icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/Lift_platform.png" type="Texture" id=2]
 [ext_resource path="res://assets/sounds/ELEVATOR.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -16,6 +16,8 @@ script = ExtResource( 1 )
 scale = Vector2( 6, 1.5 )
 
 [node name="Sprite" type="Sprite" parent="Floor"]
+position = Vector2( 0, 5 )
+scale = Vector2( 0.053, 0.18 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
