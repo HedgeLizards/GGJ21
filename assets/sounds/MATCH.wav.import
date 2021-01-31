@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MATCH.wav-3c5363b64a033fad23190d00c0991265.sample"
+
+[deps]
+
+source_file="res://assets/sounds/MATCH.wav"
+dest_files=[ "res://.import/MATCH.wav-3c5363b64a033fad23190d00c0991265.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
