@@ -60,17 +60,17 @@ range_height = 200.0
 
 [node name="Step0" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
-volume_db = -15.0
+volume_db = -21.0
 
 [node name="Step1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-volume_db = -15.0
+volume_db = -21.0
 
 [node name="Step2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -15.0
+volume_db = -21.0
 
 [node name="Step3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -15.0
+volume_db = -21.0
 [connection signal="frame_changed" from="Sprite" to="." method="_on_Sprite_frame_changed"]

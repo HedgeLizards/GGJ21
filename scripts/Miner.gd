@@ -41,10 +41,10 @@ func _physics_process(delta):
 		vel.x = 0
 	
 	vel.y += delta * GRAVITY
-	if is_on_floor():
-		if Input.is_action_just_pressed("up") and active:
-			standing = false
-			vel.y = -jump_speed
+#	if is_on_floor():
+#		if Input.is_action_just_pressed("up") and active:
+#			standing = false
+#			vel.y = -jump_speed
 	
 	var dvel = self.move_and_slide(vel, Vector2(0, -1))
 	vel = dvel
