@@ -17,7 +17,7 @@ func _on_Valve_body_entered(body):
 func _on_Valve_body_exited(body):
 	activator = null
 
-func _unhandled_input(event):
+func _input(event):
 	if activator && activator.active && event.is_action_pressed('interact'):
 		for water_node in water_nodes:
 			water_node.get_node('CollisionShape2D').disabled = water_node.flowing

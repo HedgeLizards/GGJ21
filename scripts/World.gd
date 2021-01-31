@@ -32,6 +32,8 @@ func _input(event):
 	if Input.is_action_just_pressed("switch") and can_switch:
 		self.is_canary = not is_canary
 		self.activate_player()
+	elif event.is_action_pressed('exit'):
+		get_tree().change_scene('res://scenes/Menu.tscn')
 
 
 
