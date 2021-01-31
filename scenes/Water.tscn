@@ -77,5 +77,6 @@ process_material = SubResource( 6 )
 
 [node name="Noise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
-max_distance = 1500.0
+max_distance = 1000.0
+attenuation = 3.0
 [connection signal="finished" from="Noise" to="." method="playsound"]

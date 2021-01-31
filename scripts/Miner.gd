@@ -8,6 +8,7 @@ var vel = Vector2()
 var active = true
 var is_player = true
 var standing = true
+var is_miner = true
 
 var oldpos = Vector2()
 
