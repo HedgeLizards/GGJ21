@@ -9,8 +9,8 @@ export var rotation_time = 3
 export var d_energy = 0.6
 export var avg_energy = 1.0
 export var avg_attraction = 0.02
-export var min_energy = 0.5
-export var max_energy = 1.5
+export var min_energy = 0.7
+export var max_energy = 1.3
 var t = 0
 
 
