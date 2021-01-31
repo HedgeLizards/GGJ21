@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MUSIC_PLACEHOLDER.ogg-89a96408ae4c03010b90c9949e73454b.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/MUSIC_PLACEHOLDER.ogg"
+dest_files=[ "res://.import/MUSIC_PLACEHOLDER.ogg-89a96408ae4c03010b90c9949e73454b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

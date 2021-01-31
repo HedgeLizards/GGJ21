@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/AMBIENT_PLACEHOLDER.ogg-b417b4c12360cae783b47090e992b7db.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/AMBIENT_PLACEHOLDER.ogg"
+dest_files=[ "res://.import/AMBIENT_PLACEHOLDER.ogg-b417b4c12360cae783b47090e992b7db.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
