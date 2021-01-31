@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/sounds/LEVER.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 17.8102, 17.6146 )
+extents = Vector2( 21, 21 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "pull_lever"
@@ -25,12 +25,11 @@ tracks/0/keys = {
 }
 
 [node name="Lever" type="Area2D"]
-position = Vector2( 0.943878, 74.5663 )
-scale = Vector2( 4, 4 )
+scale = Vector2( 3, 3 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.41582, 9.91071 )
+position = Vector2( 0, 11 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -38,14 +37,14 @@ visible = false
 texture = ExtResource( 1 )
 
 [node name="Stick" type="Sprite" parent="."]
-position = Vector2( 0.651787, 20.5395 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 0, 27.5 )
+scale = Vector2( 0.285, 0.285 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, -50 )
 
 [node name="Base" type="Sprite" parent="."]
-position = Vector2( 0.235973, 18.1281 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 0, 24.5 )
+scale = Vector2( 0.285, 0.285 )
 texture = ExtResource( 4 )
 
 [node name="PullAnimation" type="AnimationPlayer" parent="."]

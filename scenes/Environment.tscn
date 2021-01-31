@@ -154,7 +154,7 @@ __meta__ = {
 }
 
 [node name="Instructions1" type="Sprite" parent="."]
-position = Vector2( 2280, -384 )
+position = Vector2( 2292, -384 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 7 )
 
@@ -173,11 +173,11 @@ position = Vector2( 2496, -1056 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 9 )
 
-[node name="WallLantern" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1558.3, -1506.34 )
+[node name="WallLantern1" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1536, -1152 )
 
 [node name="WallLantern2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1742.44, -4300.16 )
+position = Vector2( 1536, -3840 )
 [connection signal="on_pulled" from="Lever1" to="Elevator1" method="toggle"]
 [connection signal="on_pulled" from="Lever2" to="Elevator2" method="toggle"]
 [connection signal="on_pulled" from="Lever3" to="Elevator3" method="toggle"]
