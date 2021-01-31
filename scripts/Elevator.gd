@@ -6,6 +6,7 @@ export var at_top = false
 export var speed = 100
 
 var dy = 0
+var running = false
 
 
 
@@ -21,6 +22,8 @@ func _ready():
 
 func toggle():
 	dy = -dy
+	running = true
+	playsound()
 
 
 func _input(event):
@@ -28,5 +31,14 @@ func _input(event):
 		toggle()
 
 func _physics_process(delta):
+	var last_y = $Floor.position.y
 	$Floor.position.y = clamp($Floor.position.y + delta * dy, 0, height)
+	running = $Floor.position.y != last_y
+	playsound()
+
+func playsound():
+	if running and not $Noise.playing:
+		$Noise.play()
+	elif not running and $Noise.playing:
+		$Noise.stop()
 
