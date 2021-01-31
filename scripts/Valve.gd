@@ -23,7 +23,8 @@ func _input(event):
 			water_node.get_node('CollisionShape2D').disabled = water_node.flowing
 			water_node.flowing = !water_node.flowing
 			water_node.get_node('Particles2D').emitting = water_node.flowing
-			
+			water_node.get_node('Noise').playing = water_node.flowing
+		
 		turned = !turned
 		
 		$Tween.remove_all()
@@ -38,20 +39,6 @@ func _input(event):
 
 func _on_Tween_tween_step(object, key, elapsed, value):
 	for water_node in water_nodes:
-		var size = animation if water_node.flowing == turned else 1 - animation
-		water_node.scale.x = size
-		var noise = water_node.get_node("Noise")
-		if not noise.playing:
-			noise.play()
-		noise.volume_db = size * 40 - 40
-		
+		water_node.scale.x = animation if water_node.flowing == turned else 1 - animation
 	
 	rotation_degrees = animation * 270
-
-
-func _on_Tween_tween_all_completed():
-	for water_node in water_nodes:
-		var noise = water_node.get_node("Noise")
-		if not noise.playing:
-			noise.play()
-		noise.stop()
