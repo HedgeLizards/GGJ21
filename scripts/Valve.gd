@@ -38,6 +38,20 @@ func _unhandled_input(event):
 
 func _on_Tween_tween_step(object, key, elapsed, value):
 	for water_node in water_nodes:
-		water_node.scale.x = animation if water_node.flowing == turned else 1 - animation
+		var size = animation if water_node.flowing == turned else 1 - animation
+		water_node.scale.x = size
+		var noise = water_node.get_node("Noise")
+		if not noise.playing:
+			noise.play()
+		noise.volume_db = size * 40 - 40
+		
 	
 	rotation_degrees = animation * 270
+
+
+func _on_Tween_tween_all_completed():
+	for water_node in water_nodes:
+		var noise = water_node.get_node("Noise")
+		if not noise.playing:
+			noise.play()
+		noise.stop()

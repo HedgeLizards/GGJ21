@@ -8,8 +8,14 @@ export(Color, RGB) var color = Color(0, 0.25, 0.5) setget set_color
 func _ready():
 	if !Engine.is_editor_hint() && !flowing:
 		$CollisionShape2D.disabled = true
-		
 		scale.x = 0
+	playsound()
+
+func playsound():
+	if flowing:
+		$Noise.playing = true
+	else:
+		$Noise.playing = false
 
 func set_size(value):
 	size = value
