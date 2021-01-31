@@ -22,5 +22,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 one_way_collision = true
 
-[node name="Noise" type="AudioStreamPlayer2D" parent="."]
+[node name="Noise" type="AudioStreamPlayer2D" parent="Floor"]
+scale = Vector2( 0.166667, 0.666667 )
 stream = ExtResource( 3 )
+volume_db = -12.0

@@ -37,8 +37,8 @@ func _physics_process(delta):
 	playsound()
 
 func playsound():
-	if running and not $Noise.playing:
-		$Noise.play()
-	elif not running and $Noise.playing:
-		$Noise.stop()
+	if running and not $Floor/Noise.playing:
+		$Floor/Noise.play()
+	elif not running and $Floor/Noise.playing:
+		$Floor/Noise.stop()
 
