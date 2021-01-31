@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/tilesets/placeholder_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Ending.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://scenes/Lever.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Water.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Valve.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/MOVE.png" type="Texture" id=7]
+[ext_resource path="res://assets/SWITCH.png" type="Texture" id=8]
+[ext_resource path="res://assets/INTERACT.png" type="Texture" id=9]
 
 [node name="Environment" type="Node2D"]
 
@@ -149,6 +152,26 @@ color = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Instructions1" type="Sprite" parent="."]
+position = Vector2( 2280, -384 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="Instructions2" type="Sprite" parent="."]
+position = Vector2( 912, -384 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="Instructions3" type="Sprite" parent="."]
+position = Vector2( 528, -384 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 9 )
+
+[node name="Instructions4" type="Sprite" parent="."]
+position = Vector2( 2496, -1056 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 9 )
 [connection signal="on_pulled" from="Lever1" to="Elevator1" method="toggle"]
 [connection signal="on_pulled" from="Lever2" to="Elevator2" method="toggle"]
 [connection signal="on_pulled" from="Lever3" to="Elevator3" method="toggle"]
