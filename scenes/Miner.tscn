@@ -18,24 +18,24 @@
 [ext_resource path="res://assets/miner/miner_idle_1.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 50, 100 )
+extents = Vector2( 50, 120 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "jump",
+"speed": 0.0
 } ]
 
 [node name="Miner" type="KinematicBody2D"]
@@ -44,13 +44,13 @@ collision/safe_margin = 0.04
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 10 )
+position = Vector2( 0, 9 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.285, 0.285 )
 frames = SubResource( 2 )
-animation = "jump"
+animation = "idle"
 
 [node name="Hand" type="Node2D" parent="."]
 position = Vector2( 85, -30 )
