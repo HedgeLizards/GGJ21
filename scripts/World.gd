@@ -17,8 +17,7 @@ func _ready():
 
 func activate_player():
 	if is_canary:
-		$Miner/Sprite.playing = false
-		$Miner/Sprite.frame = 0
+		$Miner/Sprite.animation = "idle"
 		
 		$Canary.active = true
 		$Miner.active = false
