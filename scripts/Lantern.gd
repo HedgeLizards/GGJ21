@@ -43,8 +43,7 @@ func _process(delta):
 
 func lightup():
 	if alight == OFF:
-		$LighterSound.play()
-		$PreLight.start()
+		$Darkness.start()
 	
 func start_light():
 	$Tween.interpolate_property(self, 'energy', 0, avg_energy, 2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
@@ -54,3 +53,8 @@ func start_light():
 
 func _on_Tween_tween_all_completed():
 	alight = ON
+
+
+func lightmatch():
+	$LighterSound.play()
+	$PreLight.start()

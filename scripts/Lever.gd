@@ -10,5 +10,6 @@ func _input(event):
 			if body.get("is_player") != null and body.active:
 				emit_signal("on_pulled")
 				$PullAnimation.play("pull_lever")
+				$Noise.play()
 				break
 

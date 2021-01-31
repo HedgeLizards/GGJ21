@@ -32,6 +32,7 @@ func _unhandled_input(event):
 			$Tween.interpolate_property(self, 'animation', null, 0, animation * 2, Tween.TRANS_LINEAR, 0)
 		
 		$Tween.start()
+		$Noise.play()
 
 func _on_Tween_tween_step(object, key, elapsed, value):
 	for water_node in water_nodes:

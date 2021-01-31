@@ -29,6 +29,8 @@ func _physics_process(delta):
 		
 		if input_movement != 0 && (is_on_floor() or standing):
 			$Sprite.playing = true
+			if randf() < delta * 1.0:
+				$MinerSounds.play_something()
 		else:
 			$Sprite.playing = false
 			$Sprite.frame = 0
