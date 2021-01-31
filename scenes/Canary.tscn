@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://assets/icon.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Canary.gd" type="Script" id=2]
 [ext_resource path="res://assets/light.png" type="Texture" id=3]
 [ext_resource path="res://assets/canary/canary_fly_0.png" type="Texture" id=4]
@@ -12,6 +13,11 @@ extents = Vector2( 20, 10.8339 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "fly",
@@ -38,4 +44,4 @@ shadow_color = Color( 0, 0, 0, 1 )
 position = Vector2( -8, -4 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
-animation = "fly"
+animation = "idle"
