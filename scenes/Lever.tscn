@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/lever_placeholder.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Lever.gd" type="Script" id=2]
 [ext_resource path="res://assets/lever/Lever_stick.png" type="Texture" id=3]
 [ext_resource path="res://assets/lever/Lever_base.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/LEVER.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 24 )
@@ -47,3 +48,6 @@ texture = ExtResource( 4 )
 
 [node name="PullAnimation" type="AnimationPlayer" parent="."]
 anims/pull_lever = SubResource( 2 )
+
+[node name="Noise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
