@@ -16,6 +16,9 @@ func _ready():
 
 func activate_player():
 	if is_canary:
+		$Miner/Sprite.playing = false
+		$Miner/Sprite.frame = 0
+		
 		$Canary.active = true
 		$Miner.active = false
 		$Miner/Camera.move_to($Canary)
