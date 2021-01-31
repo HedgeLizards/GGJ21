@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	var factor = OS.get_screen_dpi() / 72.0
+	var factor = OS.get_screen_scale()
 	
 	for child in get_children():
 		child.rect_scale *= factor

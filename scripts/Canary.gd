@@ -10,6 +10,9 @@ var vel = Vector2()
 var is_player = true
 var dir = 1
 
+func _ready():
+	$Light.texture_scale = 0
+
 func _physics_process(delta):
 	
 	var control = int(Input.is_action_pressed('right')) - int(Input.is_action_pressed('left'))
