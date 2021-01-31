@@ -42,3 +42,8 @@ func _on_CanaryDetection_body_entered(body):
 	if body.get("is_miner"):
 		can_switch = true
 
+
+
+func _on_MusicIntroTimer_timeout():
+	$Music.play()
+	$Ambient.play()
