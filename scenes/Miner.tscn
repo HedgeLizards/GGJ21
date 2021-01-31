@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/Lantern.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Miner.gd" type="Script" id=2]
-[ext_resource path="res://scripts/MinerSounds.gd" type="Script" id=3]
 [ext_resource path="res://assets/sounds/STEP_3.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/sounds/STEP_2.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/miner/miner_walk_0.png" type="Texture" id=6]
@@ -59,7 +58,19 @@ range_height = 200.0
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="MinerSounds" type="AudioStreamPlayer2D" parent="."]
-volume_db = -20.371
-script = ExtResource( 3 )
-sounds = [ ExtResource( 14 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 15 ) ]
+[node name="Step0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -15.0
+
+[node name="Step1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -15.0
+
+[node name="Step2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.0
+
+[node name="Step3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -15.0
+[connection signal="frame_changed" from="Sprite" to="." method="_on_Sprite_frame_changed"]
