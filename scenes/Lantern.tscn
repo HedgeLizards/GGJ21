@@ -9,7 +9,7 @@ extents = Vector2( 2, 2 )
 
 [node name="Lantern" type="Light2D"]
 texture = ExtResource( 2 )
-color = Color( 1, 0.776471, 0.423529, 1 )
+color = Color( 1, 0.890196, 0.780392, 1 )
 energy = 0.0
 range_height = 100.0
 shadow_enabled = true
