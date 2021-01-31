@@ -35,7 +35,7 @@ script = ExtResource( 7 )
 [node name="Tween" type="Tween" parent="Miner/Camera"]
 
 [node name="Canary" parent="." instance=ExtResource( 3 )]
-position = Vector2( 720, -207 )
+position = Vector2( 720, -203 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0, 0, 0, 1 )
