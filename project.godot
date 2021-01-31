@@ -89,6 +89,7 @@ interact={
 2d_physics/layer_2="Miner"
 2d_physics/layer_3="Canary"
 2d_physics/layer_4="Water"
+2d_physics/layer_5="Barrier"
 
 [logging]
 

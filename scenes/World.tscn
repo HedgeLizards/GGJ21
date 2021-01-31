@@ -12,9 +12,9 @@ script = ExtResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -1536.0
-margin_top = -9792.0
+margin_top = -12096.0
 margin_right = 1920.0
-margin_bottom = -4228.0
+margin_bottom = -5280.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
 expand = true
