@@ -25,7 +25,7 @@ func _on_Play_mouse_exited():
 	$VBoxContainer/Play.modulate = Color(1, 1, 1)
 
 func _on_Play_pressed():
-	get_tree().change_scene_to(preload('res://scenes/World.tscn'))
+	get_tree().change_scene_to(preload('res://scenes/Opening.tscn'))
 
 func _on_Exit_mouse_entered():
 	$VBoxContainer/Exit.modulate = Color(1.2, 1.2, 1.2)

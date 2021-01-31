@@ -8,9 +8,14 @@ export(Color, RGB) var color = Color(0, 0.25, 0.5) setget set_color
 func _ready():
 	if !Engine.is_editor_hint() && !flowing:
 		$CollisionShape2D.disabled = true
-		$Noise.playing = false
 		
 		scale.x = 0
+	playsound()
+
+
+func playsound():
+	if flowing:
+		$Noise.play()
 
 func set_size(value):
 	size = value
@@ -34,3 +39,5 @@ func set_color(value):
 	
 	$Particles2D.process_material = $Particles2D.process_material.duplicate(true)
 	$Particles2D.process_material.color_ramp.gradient.colors = [color, Color(color.r, color.g, color.b, 0.0)]
+
+
