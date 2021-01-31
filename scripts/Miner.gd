@@ -30,11 +30,15 @@ func _physics_process(delta):
 		
 		if input_movement != 0 && (is_on_floor() or standing):
 			$Sprite.playing = true
+			$Sprite.animation = "walk"
 			if randf() < delta * 1.0:
 				$MinerSounds.play_something()
+		elif (is_on_floor() or standing):
+			$Sprite.playing = true
+			$Sprite.animation = "idle"
 		else:
-			$Sprite.playing = false
-			$Sprite.frame = 0
+			$Sprite.animation = "jump"
+			$Sprite.playing = true
 		
 		vel.x = input_movement*speed
 	else:
