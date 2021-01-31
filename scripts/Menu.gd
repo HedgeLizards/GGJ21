@@ -35,3 +35,9 @@ func _on_Exit_mouse_exited():
 
 func _on_Exit_pressed():
 	get_tree().quit()
+
+func _input(event):
+	if event.is_action_pressed('interact'):
+		_on_Play_pressed()
+	elif event.is_action_pressed('exit'):
+		_on_Exit_pressed()

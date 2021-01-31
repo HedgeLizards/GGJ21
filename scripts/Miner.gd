@@ -31,8 +31,6 @@ func _physics_process(delta):
 		
 		if input_movement != 0 && (is_on_floor() or standing):
 			$Sprite.animation = "walk"
-			if randf() < delta * 1.0:
-				$MinerSounds.play_something()
 		elif (is_on_floor() or standing):
 			$Sprite.animation = "idle"
 		else:
@@ -56,3 +54,7 @@ func _physics_process(delta):
 	elif position.y - oldpos.y > 0:
 		standing = false
 	oldpos = position
+
+func _on_Sprite_frame_changed():
+	if $Sprite.animation == 'walk' && ($Sprite.frame - 1) % 4 == 0:
+		get_node('Step%d' % (randi() % 4)).play()
